@@ -1,0 +1,47 @@
+﻿@model IEnumerable<WebAppMVC.Models.Player>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Players List</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PTeam)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PCategory)
+            </th>
+           
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PTeam)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PCategory)
+            </td>
+          
+        </tr>
+}
+    </tbody>
+</table>
